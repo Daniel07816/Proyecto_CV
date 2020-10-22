@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{my_data['informacion_general']['titulo']}}</title>
+    <style type="text/css">
+         body{
+             background-color:lemonchiffon;
+         }
+         p{
+            font-family: Georgia, "Times New Roman",
+            Times, serif;
+        }
+         h1, h2, h3 {
+            font-family: Helvetica, Geneva, Arial,
+            SunSans-Regular, sans-serif 
+        }
+        .circular--square{
+            border-radius: 50%;
+        }
+        #tabla3{
+            width: 760px;
+            padding-left: 22.5%;
+            text-align: justify;
+        }
+        #tabla4{
+            width: 450px;
+            padding-left: 36%;
+            text-align: left;
+        }
+        #tabla5{
+            width: 100px;
+            padding-left: 48%;
+            text-align: left;
+        }
+        body{
+            text-align: center;
+        }
+        nav a {
+                display: table-cell;
+                border-color: gray;
+                color: black;
+                text-align: center;
+                padding: 12px;
+                text-decoration: none;
+                font-size: 17px;
+                }
+
+                nav a:hover {
+                background-color:lemonchiffon;
+                color: black;
+                }
+
+                nav a.active {
+                background-color:lemonchiffon;
+                color: black;
+                }
+
+                nav {
+                background-color:white;
+                width: 75px;
+                padding: 20px;
+                margin: auto;
+                position: fixed;
+                }
+    </style>
+</head>
+<body>
+    <nav id="nav">
+        <a href="/">Home</a><br>
+        <a href="/cv">CV</a>
+    </nav>
+    <div class="container">
+    <p><img class="circular--square" src="/static/perfil.jpg" alt="" height="130" width="130"></p>
+    <h1>{{my_data['informacion_personal']['mi_nombre_completo']}}</h1>
+    
+    <p>Lugar de Nacimiento: {{my_data['informacion_personal']['donde_naci']}} 
+        <br>Estudie en la {{my_data['informacion_profesional']['educacion']}}
+        <br>Edad: {{my_data['informacion_personal']['mi_edad']}}
+        <br>Preparacion: {{my_data['informacion_personal']['mi_profesion']}}
+    </p>
+    <h3>Acerca de Mi</h3>
+    <p id="tabla3"> 
+        <br><span>{{my_data['informacion_personal']['sobre_mi']}}
+    </span></p>
+    <p>Mis intereses:
+            <ul id="tabla4">
+                {% for item in my_data['informacion_personal']['mis_intereses'] %}
+                <li>{{item}}</li>
+                {% endfor %}
+            </ul>
+    </p>
+    <h2>Informacion Profesional: </h2>
+    <p>Idiomas que manejo: 
+            <ol id="tabla5">
+                {% for item in my_data['informacion_personal']['idiomas_manejables'] %}
+                    <li>{{item}}</li>
+                {% endfor %}
+            </ol>
+    Tecnologias que manejo yo:
+        <ol id="tabla5">
+        {% for item in my_data['informacion_profesional']['tecnologias'] %}
+            <li>{{item}}</li>
+        {% endfor %}
+        </ol>
+    </p>
+    <h2>Referencias: </h2>
+    <h3>Laborales: </h3>
+    <ol id="tabla5">
+    {% for item in my_data['referencias']['laborales'] %}
+        <li>{{item}}</li>
+    {% endfor %}
+    </ol>
+
+    <h3>Personales: </h3>
+    <ol id="tabla5">
+    {% for item in my_data['referencias']['personales'] %}
+        <li>{{item}}</li>
+    {% endfor %}
+    </ol>
+    </div>
+</body>
+</html>

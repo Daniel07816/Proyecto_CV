@@ -1,0 +1,43 @@
+fotografia: perfil.jpg
+informacion_general:
+    titulo: Curriculum Vitae
+informacion_personal:
+    mi_nombre_completo: Daniel Behar Aldana
+    donde_naci: Guatemala
+    idiomas_manejables:
+        - Espanol
+        - Ingles
+    mi_edad: 18
+    sobre_mi: Soy una persona que ama la tecnologia, me apasiona la ciberseguridad y me gusta poder trabajar en programas y redes de alta seguridad. Soy dedicado, apasionado y responsable, buscando dar lo mejor de mi en todo momento. Desde mis estudios siempre me gusto dar la milla extra y deseo seguir asi. Finalmente, me gusta aprender y colaborar con mas personas, ya que asi es como los trabajos son mejores y donde uno mas logra aprender.
+    mi_profesion: Computer Science
+    mis_intereses:
+        - La tecnologia en general (pero me enfoco mucho en ciberseguridad)
+        - La programacion me gusta muchisimo
+        - Todo lo relacionado a inteligencia artificial
+        - La musica, en especial la bateria
+        - La naturaleza
+informacion_profesional:
+    tecnologias: 
+        - Python
+        - C#
+        - C
+        - Java
+        - SQL
+    educacion: Universidad Francisco Marroquin
+referencias:
+    laborales: 
+        - CEMACO
+        - Manos a la Obra
+        - IRTRA
+        - NovaLab
+    personales: 
+        - Denise Behar
+        - Christopher Rowe
+        - Jose Osorio
+        - Javier Rivera
+links:
+    Facebook: https://www.facebook.com/daniel.beharaldana
+    Twitter: https://twitter.com/danbehar1501
+    Instagram: https://www.instagram.com/danbehar1501/
+    Repl.it: https://repl.it/@DanielBehar
+    GitHub: https://github.com/Daniel07816

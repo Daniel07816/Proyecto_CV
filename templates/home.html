@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Principal</title>
+    <style>
+         .pill-nav a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 15px;
+                text-decoration: none;
+                font-size: 17px;
+                border-radius: 5px;
+                }
+
+                .pill-nav a:hover {
+                background-color:lightgreen;
+                color: black;
+                }
+
+                .pill-nav a.active {
+                background-color:lightgreen;
+                color: black;
+                }
+
+                div {
+                background-color: darkgreen;
+                width: 500px;
+                box-shadow: 5px 10px 18px #888888;
+                padding: 50px;
+                margin: auto;
+                }
+
+                .circular--square{
+                border-radius: 50%;
+                }
+
+                p, h1 {
+                    text-align: center;
+                    color: white;
+                }
+        </style>
+</head>
+<body>
+    <div class="pill-nav">
+    <h1>{{my_data['informacion_personal']['mi_nombre_completo']}}</h1>
+    <p><img class="circular--square" src="/static/perfil.jpg" alt="" height="130" width="130"></p>
+    
+    {% for item in my_data['links'] %}
+    <a class="links" href="{{my_data['links'][item]}}" >{{item}} </a><br>
+    {% endfor %}
+    <a class="links" href='cv' >CV </a>
+    
+    </div>
+</body>
+</html>
