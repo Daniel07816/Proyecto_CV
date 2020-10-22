@@ -25,5 +25,5 @@ def index():
     return template.render(my_data=my_yaml, image_file=image_file, my_style=my_style)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0",port=5000,debug=True)
     TEMPLATES_AUTO_RELOAD = True
